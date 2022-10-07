@@ -15,10 +15,10 @@ position: relative;
 transition: 0.5s;
 }
 :root{
-    --bg1 :#ff3800;
-    --bg2 :#3498db;
-    --bg :#07E1EC;
-    --bg3: #ff9c24;
+    --bg1 : #e399a3;
+    --bg2 : #72a8df;
+    --bg :#54d2d9;
+    --bg3: #e2b274;
 }
 *{
     margin:0;
@@ -26,6 +26,7 @@ padding:0;
 }
 .A h1{color:#050000;
     font-family: 'Saira', sans-serif;
+    font-weight: 700;
     }
     .A p{
         color:#000505;
