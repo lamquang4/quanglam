@@ -48,7 +48,7 @@ padding:0;
         background-size: cover;
     }
     .B {
-        display: flex;
+        display: inline-flex;
         justify-content: space-between;
         margin: 0 12px 15px 20px;
 
@@ -74,10 +74,11 @@ padding:0;
         
         .icon{
             position: absolute;
-            display: flex;
+            display:flex;
             flex-direction: column;
         }
         .C {
+            
             padding: 12px;
             color: var(--bg1);
             background: #ffffff;
@@ -86,10 +87,11 @@ margin: 5px 0 0 12px;
 }
 .A img:hover{
     width: 400px;
-    height: 500px;
+    height: 550px;
     margin:0;
     border: 5px solid #f57f18;
     border-radius:10px;
+    ;
 }
 .icon svg:hover{
     color:hsl(64, 91%, 55%);
@@ -111,6 +113,7 @@ font-weight: 500;
 font-size: 20px;
 font-family: bold,sans-serif;
 }
+
 
 
     
