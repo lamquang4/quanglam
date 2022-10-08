@@ -90,12 +90,12 @@ margin: 5px 0 0 12px;
     width: 400px;
     height: 550px;
     margin:0;
-    border: 5px solid #f57f18;
+    border: 5px solid gold;
     border-radius:10px;
     ;
 }
 .icon svg:hover{
-    color:hsl(64, 91%, 55%);
+    color:gold;
 }
 #D{background: linear-gradient(45deg, #1da1f2, #0e71c8);}
     #E{background:linear-gradient(45deg, #d5135a, #f05924);}
@@ -114,7 +114,10 @@ font-weight: 500;
 font-size: 20px;
 font-family: bold,sans-serif;
 }
-
+.B button:hover{color:gold;}
+.A p:hover{color:gold;}
+.A span:hover{color:gold;}
+.A h1:hover{color:gold;}
 
 
     
