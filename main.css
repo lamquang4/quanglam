@@ -4,11 +4,11 @@ height: 500px;
 border-radius: 10px;
 background: linear-gradient(var(--bg1), var(--bg2));
 }
-.A img {
+#me {
 width:200px;
 height:200px;
 border-radius:50%;
-border: 5px solid #fafafa;
+border: 8px solid #fafafa;
 margin:20px auto;
 cursor: pointer;
 position: relative;
@@ -66,7 +66,7 @@ padding:0;
      font-family: 'Patrick Hand', cursive;
      background:   #fff7ff;
      border-style: outset;
-     border-color: buttonborder;
+     border-color: black;
      border-image: initial;
      appearance: auto;
     writing-mode: horizontal-tb !important;
@@ -86,13 +86,13 @@ padding:0;
 border-radius:50%;
 margin: 5px 0 0 12px;
 }
-.A img:hover{
+#me:hover{
     width: 400px;
     height: 550px;
     margin:0;
-    border: 5px solid gold;
-    border-radius:10px;
-    ;
+    border: 6px solid gold;
+    border-radius:15px;
+    
 }
 .icon svg:hover{
     color:gold;
@@ -118,7 +118,11 @@ font-family: bold,sans-serif;
 .A p:hover{color:gold;}
 .A span:hover{color:gold;}
 .A h1:hover{color:gold;}
+#Sgu{height: 60px;
+width: 60px;
+margin-top: 155px;
 
+}
 
     
 
