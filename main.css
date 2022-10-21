@@ -120,10 +120,20 @@ font-family: bold,sans-serif;
 .A h1:hover{color:gold;}
 #Sgu{height: 60px;
 width: 60px;
-margin-top: 155px;
+margin-top: 162px;
 
 }
-#I a:hover{color:gold;}
+
+#I button{cursor: pointer;
+background:linear-gradient( var(--bg2));
+border-style: outset;
+    border-color: black;
+    border-image: initial;
+    appearance: auto;
+    stroke: currentcolor;
+width:35px;
+height: 35px;
+border-radius: 7px;}
     
 
   
