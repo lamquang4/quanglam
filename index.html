@@ -83,3 +83,98 @@ function copyToClipboard() {
 
   </script>
   </html>
+  <style>
+    body {
+   background: auto;
+}
+
+.clock {
+   position: absolute;
+   top: 6.5%;
+   left: 6%;
+   transform: translateX(-50%) translateY(-50%);
+   color: black;
+   font-size: 22px;
+   font-family: monospace;
+   letter-spacing: 3px;
+  
+   font-weight: bold;
+
+}
+#date{
+
+font-size: 21px;
+font-weight: bold;
+font-family: monospace;
+display: block;   
+}
+
+  
+  
+</style>
+<p id="date"></p>
+<script>
+n =  new Date();
+y = n.getFullYear();
+m = n.getMonth() + 1;
+d = n.getDate();
+
+document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+</script>
+
+
+<div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+
+<script>
+function showTime(){
+   var date = new Date();
+   var h = date.getHours(); // 0 - 23
+   var m = date.getMinutes(); // 0 - 59
+   var s = date.getSeconds(); // 0 - 59
+   var session = "AM";
+   
+   if(h == 0){
+       h = 12;
+   }
+   
+   if(h > 12){
+       h = h - 12;
+       session = "PM";
+   }
+   
+   h = (h < 10) ? "0" + h : h;
+   m = (m < 10) ? "0" + m : m;
+   s = (s < 10) ? "0" + s : s;
+   
+   var time = h + ":" + m + ":" + s + " " + session;
+   document.getElementById("MyClockDisplay").innerText = time;
+   document.getElementById("MyClockDisplay").textContent = time;
+   
+   setTimeout(showTime, 1000);
+   
+}
+
+showTime();
+</script>
+
+<script>
+var div = document.getElementById("date");
+
+function getRandomColor() {
+var letters = '0123456789ABCDEF';
+var color = '#';
+for (var i = 0; i < 6; i++ ) {
+  color += letters[Math.floor(Math.random() * 16)];
+}
+return color;
+}
+
+function changeColor(){
+div.style.textColor= getRandomColor();
+}
+
+setInterval(changeColor,1000);
+</script>
+
+
+
