@@ -1,183 +1,735 @@
-<!DOCTYPE html>
-<head>
-    <title>Giới thiệu bản thân</title>
-
-
-</head>
-<html>
 <body>
-    <div class="A">
-      <div class="icon">
-        <a href="https://www.facebook.com/profile.php?id=100008878278330" target="_blank">
-        <svg xmlns="https://www.facebook.com/profile.php?id=100008878278330" class="C" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
-         </svg>
-        </a>
-        <a href="https://www.tiktok.com/@tftjudas15"target="_blank">
-         <svg xmlns="http://www.w3.org/2000/svg" class="C" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M9 12a4 4 0 1 0 4 4v-12a5 5 0 0 0 5 5"></path>
-         </svg>
-        </a>
-        <a href="https://www.instagram.com/quanglam20"target="_blank">
-         <svg xmlns="http://www.w3.org/2000/svg" class="C" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <rect x="4" y="4" width="16" height="16" rx="4"></rect>
-            <circle cx="12" cy="12" r="3"></circle>
-            <line x1="16.5" y1="7.5" x2="16.5" y2="7.501"></line>
-         </svg>
-        </a>
-       <img id="Sgu" src="https://lh3.googleusercontent.com/57aprN3gL-wtFgrORAddZztyB4wlaVf-w3vpA4eW3TSKrSiFUnmJ5cLMqjx_jH_pJfPEqFYkwKT_v3pLZuMdEFswL6ugZ7bvxmrnfR3-FJ84s_6mik7zwwktoTD-tYmhrwtek0iBpQ=w2400"/> 
+  <div class="balloon">
+  </div>
+</body>
+<div class="loader" id="loader"></div>
+<style>
+    #loader{
+      background-color: black;
+      background: cover;
+    }
+    
+    .loader{
+      position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 6s, visibility 6s;
+
+}
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #dddddd;
+  border-top-color: #009578;
+  border-radius: 50%;
+  animation: loading 0.8s ease infinite;
+  
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+</style>
+<script>
+    window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader");
+
+  loader.classList.add("loader--hidden");
+
+  loader.addEventListener("transitionend", () => {
+    document.body.removeChild(loader);
+  });
+});
+
+</script>
+
+
+<script>
+    
+    setTimeout(function() {
+      $('#Front').fadeIn();        
+    }, 2500);
+    setTimeout(function() {
+      $('#In').fadeIn();        
+    }, 3050);
+    setTimeout(function() {
+      $('#bd').fadeIn();        
+    }, 2500);
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        #Front { display: none; }
+        #In {display: none;}
+        #bd {display: none;}
+    </style>
+
+ <style>
+    .balloon {
+  background-image: url(https://i.imgur.com/QJZPw2X.png);
+  width: 50px;
+  height: 75px;
+ 
+  position: absolute;
+  bottom: 0%;
+  animation: move_y 30s linear forwards, oscil1 4s infinite;
+  left: 25%;
+}
+
+@keyframes move_y {
+  from {
+    bottom: -10%;
+  }
+  to {
+    bottom: 100%;
+  }
+}
+
+@keyframes oscil1 {
+  from {
+    translate: 0 0;
+    transform: rotate(0deg);
+    animation-timing-function: cubic-bezier(0.1, 0.3, 0.3, 1);
+  }
+  25% {
+    translate: 10px 0;
+    transform: rotate(3deg);
+    animation-timing-function: cubic-bezier(0.7, 0.0, 0.9, 0.7);
+  }
+  50% {
+    translate: 0 0;
+    transform: rotate(0deg);
+    animation-timing-function: cubic-bezier(0.1, 0.3, 0.3, 1);
+  }
+  75% {
+    translate: -10px 0;
+    transform: rotate(-3deg);
+    animation-timing-function: cubic-bezier(0.7, 0.0, 0.9, 0.7);
+  }
+  to {
+    translate: 0 0;
+    transform: rotate(0deg);
+  }
+}
+</style>
+
+
+
+
+
+<title>Happy birthday to you</title>
+<div class="birthdayCard" id="bd">
+  <div class="cardFront" id="Front">
+    <div class="front-text">
+    <h3 class="happy">HAPPY</h3>
+    <h2 class="bday">BIRTHDAY</h2> 
+    <h3 class="toyou">to you!</h3>  
+    </div>
+    <div class="wrap-deco">
+  <div class="decorations"></div>
+  <div class="decorationsTwo"></div>
+    </div> 
+      <div class="wrap-decoTwo">
+  <div class="decorations"></div>
+  <div class="decorationsThree"></div>
+    </div>
+    <div class="plate">
+      <div class="cake"></div>
+      <div class="flame"></div>
+    </div>
+  </div>
+    
+    <div class="cardInside" id="In">
+       <div class="inside-text" id="IText">
+    <h3 class="happy">HAPPY</h3>
+    <h2 class="bday">BIRTHDAY</h2> 
+    <h3 class="toyou">to you!</h3>  
+    </div>
+      <div class="wishes">
+      <p>Gửi Đạt ngu,</p>
+      <p> Chúc mừng sinh nhật!! Chúc mày có một ngày sinh nhật thật vui vẻ. Chúc mày sẽ thành công, hạnh phúc trong cả công việc lẫn cuộc sống.</p>
+      <p class="name">Quang  </p>
+      <p class="ki">  _____</p>
+      
       </div>
-      <img id="me" src="https://lh3.googleusercontent.com/0R_ACfmcHfVq2q6p1LmnKbF4J8loDgRO1t66dmA5Kk_IXoSNFYHxx-ZlXmSSqC4lfS2ySzc95PC7nPfuVrNxnmSYU8BG-divyLYdUOGcQ64VdjllY8R_k3i-DdfdYI4D1ldhhIQ-VQ=w2400"/>
-      <h1> Lâm Diệu Quang</h1>
-   
-      <div id="I">
-        <button onclick="copyToClipboard('#p1')">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-        <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
-        <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="blank">
-        <svg xmlns="http://www.w3.org/2000/svg" class="mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-            <rect x="3" y="5" width="18" height="14" rx="2" />
-            <polyline points="3 7 12 13 21 7" />
-          </svg>
-        </a>
-    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-    <rect x="3" y="5" width="18" height="14" rx="2" />
-    <polyline points="3 7 12 13 21 7" />
-  </svg>
-</button>
-<span id="O">lamdieuquang0105@gmail.com</span>
+    </div>
+  </div>
+
+<div style="height: 0; width: 0; position: absolute; visibility: hidden;">
+	<svg xmlns="http://www.w3.org/2000/svg">
+		<symbol id="icon-play" viewBox="0 0 24 24">
+			<path d="M8 5v14l11-7z"/>
+		</symbol>
+		<symbol id="icon-pause" viewBox="0 0 24 24">
+			<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+		</symbol>
+		<symbol id="icon-close" viewBox="0 0 24 24">
+			<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+		</symbol>
+		<symbol id="icon-settings" viewBox="0 0 24 24">
+			<path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/>
+		</symbol>
+		<symbol id="icon-sound-on" viewBox="0 0 24 24">
+			<path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+		</symbol>
+		<symbol id="icon-sound-off" viewBox="0 0 24 24">
+			<path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+		</symbol>
+	</svg>
 </div>
 
-      <p id="Z">Đang học tại trường đại học Sài Gòn (SGU)</p>
-      <p id="P">Sở thích: bóng đá, chơi game...</p>
-    
-      <div class="B">
-          <a href="https://www.facebook.com/profile.php?id=100008878278330"target="_blank">
-          <button id="D">Contact Me</button>
-      </a>
-          <a href="https://www.tiktok.com/@tftjudas15"target="_blank">
-          <button id="E">Follow Me</button>
-          </a>
-      </div>
-      </div>
-     
-  </body>
-  <link rel="stylesheet" href="main.css"/>
-  <link rel="stylesheet" href="main.js"/>
-  
-  
-  <script>
-function copyToClipboard() {
-    var range = document.createRange();
-    range.selectNode(document.getElementById("O"));
-    window.getSelection().removeAllRanges(); // clear current selection
-    window.getSelection().addRange(range); // to select text
-    document.execCommand("copy");
-    window.getSelection().removeAllRanges();// to deselect
-    alert("Copied gmail");
-}
 
-  </script>
-  </html>
   <style>
+    .ki{
+      position: absolute;
+  top:95%;
+  right: 1%;
+    }
+    html{
+      background: url("https://i.pinimg.com/originals/b4/77/e0/b477e0eed08653996a28df1325b27278.png");
+      background-size: cover;
+    }
     body {
-   background: auto;
-}
-
-.clock {
-   position: absolute;
-   top: 6.5%;
-   left: 6%;
-   transform: translateX(-50%) translateY(-50%);
-   color:   #ffc23d;
-   font-size: 22px;
-   font-family: monospace;
-   letter-spacing: 3px;
-  
-   font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:100vh;
 
 }
-#date{
+.name{
   position: absolute;
-    top: 1.3%;
-    left: 0.8%;
-font-size: 21px;
-font-weight: bold;
-font-family: monospace;
-display: block; 
-color:  #ffc23d;  
-}
-
+  top:90%;
   
-  
-</style>
-<p id="date"></p>
-<script>
-n =  new Date();
-y = n.getFullYear();
-m = n.getMonth() + 1;
-d = n.getDate();
+}
 
-document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+.birthdayCard {
+  position: absolute;
+  width: 250px;
+  height:350px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform: perspective(2500px);
+  transition: 1s;
+  right: 42.3%;
+  top: 33%;
+}
+
+.birthdayCard:hover {
+  transform: perspective(2500px) rotate(5deg);
+  box-shadow: inset 100px 20px 100px rgba(0,0,0,.15), 0 10px 100px rgba(0,0,0,0.3);
+}
+
+.birthdayCard:hover .cardFront {
+  transform: rotateY(-160deg); 
+}
+
+.birthdayCard:hover .front-text {
+  display: none;
+}
+
+.birthdayCard:hover .wrap-deco {
+  display: none;
+}
+
+.birthdayCard:hover .wrap-decoTwo {
+  display: none;
+}
+
+.birthdayCard:hover .plate {
+  display: none;
+}
+
+.cardFront {
+  position: relative;
+  background-color:  #1ad1ff;
+  width: 250px;
+  height:350px;
+  overflow: hidden;
+  transform-origin: left;
+  box-shadow: inset 100px 20px 100px rgba(0,0,0,.13), 30px 0 50px rgba(0,0,0,0.1);
+  transition: .4s;
+}
+
+.happy, .toyou {
+  position: relative;
+  font-family: Georgia;
+  text-align: center;
+  backface-visibility: hidden;
+  font-size: 30px; 
+}
+
+.happy {
+  top:198px;
+}
+
+.toyou {
+  top:123px;
+}
+
+.bday {
+  position: relative;
+  font-family: arial;
+  font-size: 35px;
+  text-align: center;
+  top:163px;
+}
+
+.wrap-deco {
+  position: absolute;
+  top:-230px;
+  left:-200px;
+}
+
+.decorations {
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  border: 3px solid #333;
+  border-radius: 50%;
+}
+
+.decorations:before, .decorations:after, .decorationsTwo:before, .decorationsTwo:after, .decorationsThree:before, .decorationsThree:after {
+  content:"";
+  position: absolute;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  width:0;
+  height:0;
+}
+
+.decorations:before {
+  border-top: 40px solid #f15bb5;
+  top:297px;
+  left:210px;
+  transform: rotate(-5deg);
+}
+
+.decorations:after{
+  border-top: 40px solid #f4d35e;
+  top:288px;
+  left:260px;
+  transform: rotate(-17deg);
+}
+
+.decorationsTwo:before {
+  border-top: 40px solid #00f5d4;
+  top:268px;
+  left:315px;
+  transform: rotate(-30deg);
+}
+
+.decorationsTwo:after, .decorationsThree:after {
+  border-top: 40px solid #9b5de5;
+  top:238px;
+  left:355px;
+  transform: rotate(-40deg);
+}
+
+.wrap-decoTwo {
+  transform: scaleX(-1);
+  position: absolute;
+  top:-230px;
+  left:445px; 
+}
+
+.decorationsThree:before {
+  border-top: 40px solid #00bbf9;
+  top:268px;
+  left:315px;
+  transform: rotate(-30deg);
+}
+
+.plate {
+  position: absolute;
+  width: 130px;
+  height: 5px;
+  background-color: white;
+  left:60px;
+  top:213px;
+}
+
+.cake {
+  position: absolute;
+  overflow: hidden;
+  width:100px;
+  height: 50px;
+  background-color: #f15bb5;
+  border-radius: 10px 10px 0 0;
+  top:-50px;
+  left:15px;
+  box-shadow: inset 0 -15px #f9c74f, inset 0 15px #432818;
+}
+
+.cake:before {
+  content:"";
+  position: absolute;
+  background-color: #432818;
+  width:10px;
+  height:20px;
+  top:5px;
+  border-radius:20px;
+  box-shadow: 10px 5px #f15bb5, 20px 0px #432818, 30px 2px #f15bb5, 40px 5px #432818, 50px 5px #f15bb5, 60px 0px #432818, 70px 5px #f15bb5, 80px 5px #432818, 90px 5px #f15bb5;
+}
+
+.plate:before {
+  content:"";
+  position: absolute;
+  background: repeating-linear-gradient(-45deg, #9b5de5, #9b5de5 3px, #00f5d4 3px, #00f5d4 6px);
+  width:7px;
+  height: 25px;
+  top:-75px;
+  left:61px;
+}
+
+.plate:after {
+  content:"";
+  position: absolute;
+  width:1px;
+  height: 5px;
+  background-color: #333;
+  top:-80px;
+  left:64px;
+}
+
+
+.flame {
+  position: absolute;
+  background-color: #fb5607;
+  border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+  transform: rotate(-45deg);
+  width:15px;
+  height:15px;
+  opacity:0.7;
+  top:-93px;
+  left:57px;
+}
+
+.cardInside {
+  position: absolute;
+  background-color:  #1ad1ff;
+  width: 250px;
+  height:350px;
+  z-index:-1;
+  left:0;
+  top:0;
+  box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2);
+}
+
+.inside-text {
+  position: relative;
+  top:-160px;
+  transform: scale(0.7);
+}
+
+.wishes {
+  position: relative;
+  top:-100px;
+  margin: 25px;
+}
+
+p {
+  font-family: 'Brush Script MT', cursive;
+  color: black;
+}
+
+.name {
+  margin-left:150px;
+}
+  </style>
+
+<canvas id="canvas"></canvas>
+
+
+<script>
+  window.requestAnimFrame = ( function() {
+	return window.requestAnimationFrame ||
+				window.webkitRequestAnimationFrame ||
+				window.mozRequestAnimationFrame ||
+				function( callback ) {
+					window.setTimeout( callback, 1000 / 60 );
+				};
+})();
+
+// now we will setup our basic variables for the demo
+var canvas = document.getElementById( 'canvas' ),
+		ctx = canvas.getContext( '2d' ),
+		// full screen dimensions
+		cw = window.innerWidth,
+		ch = window.innerHeight,
+		// firework collection
+		fireworks = [],
+		// particle collection
+		particles = [],
+		// starting hue
+		hue = 120,
+		// when launching fireworks with a click, too many get launched at once without a limiter, one launch per 5 loop ticks
+		limiterTotal = 20,
+		limiterTick = 0,
+		// this will time the auto launches of fireworks, one launch per 80 loop ticks
+		timerTotal = 400,
+		timerTick = 0.5,
+		mousedown = false,
+		// mouse x coordinate,
+		mx,
+		// mouse y coordinate
+		my;
+
+		
+// set canvas dimensions
+canvas.width = cw;
+canvas.height = ch;
+
+
+function random( min, max ) {
+	return Math.random() * ( max - min ) + min;
+}
+
+
+function calculateDistance( p1x, p1y, p2x, p2y ) {
+	var xDistance = p1x - p2x,
+			yDistance = p1y - p2y;
+	return Math.sqrt( Math.pow( xDistance, 2 ) + Math.pow( yDistance, 2 ) );
+}
+
+// create firework
+function Firework( sx, sy, tx, ty ) {
+	// actual coordinates
+	this.x = sx;
+	this.y = sy;
+	// starting coordinates
+	this.sx = sx;
+	this.sy = sy;
+	// target coordinates
+	this.tx = tx;
+	this.ty = ty;
+	// distance from starting point to target
+	this.distanceToTarget = calculateDistance( sx, sy, tx, ty );
+	this.distanceTraveled = 0;
+	// track the past coordinates of each firework to create a trail effect, increase the coordinate count to create more prominent trails
+	this.coordinates = [];
+	this.coordinateCount = 3;
+	// populate initial coordinate collection with the current coordinates
+	while( this.coordinateCount-- ) {
+		this.coordinates.push( [ this.x, this.y ] );
+	}
+	this.angle = Math.atan2( ty - sy, tx - sx );
+	this.speed = 1.1;
+	this.acceleration = 1.09;
+	this.brightness = random( 60, 80 );
+	// circle target indicator radius
+	this.targetRadius = 1;
+}
+
+// update firework
+Firework.prototype.update = function( index ) {
+	// remove last item in coordinates array
+	this.coordinates.pop();
+	// add current coordinates to the start of the array
+	this.coordinates.unshift( [ this.x, this.y ] );
+		// s
+	// cycle the circle target indicator radius
+	if( this.targetRadius < 8 ) {
+		this.targetRadius += 0.3;
+	} else {
+		this.targetRadius = 1;
+	}
+	
+	// speed up the firework
+	this.speed *= this.acceleration;
+	
+	// get the current velocities based on angle and speed
+	var vx = Math.cos( this.angle ) * this.speed,
+			vy = Math.sin( this.angle ) * this.speed;
+	
+	this.distanceTraveled = calculateDistance( this.sx, this.sy, this.x + vx, this.y + vy );
+	
+	
+	if( this.distanceTraveled >= this.distanceToTarget ) {
+		createParticles( this.tx, this.ty );
+		
+		fireworks.splice( index, 1 );
+	} else {
+		
+		this.x += vx;
+		this.y += vy;
+	}
+}
+
+
+Firework.prototype.draw = function() {
+	ctx.beginPath();
+
+	ctx.moveTo( this.coordinates[ this.coordinates.length - 1][ 0 ], this.coordinates[ this.coordinates.length - 1][ 1 ] );
+	ctx.lineTo( this.x, this.y );
+	ctx.strokeStyle = 'hsl(' + hue + ', 100%, ' + this.brightness + '%)';
+	ctx.stroke();
+	
+	ctx.beginPath();
+
+	ctx.stroke();
+}
+
+
+function Particle( x, y ) {
+	this.x = x;
+	this.y = y;
+
+	this.coordinates = [];
+	this.coordinateCount = 5;
+
+	while( this.coordinateCount-- ) {
+		this.coordinates.push( [ this.x, this.y ] );
+	}
+
+	this.angle = random( 0, Math.PI * 2 );
+	this.speed = random( 1, 10 );
+	
+	this.friction = 0.95;
+
+	this.gravity = 0.6;
+
+	this.hue = random( hue - 20, hue + 20 );
+	this.brightness = random( 50, 70 );
+	this.alpha = 1;
+	
+	this.decay = random( 0.0075, 0.009 );
+}
+
+
+Particle.prototype.update = function( index ) {
+	
+	this.coordinates.pop();
+
+	this.coordinates.unshift( [ this.x, this.y ] );
+	
+	this.speed *= this.friction;
+	
+	this.x += Math.cos( this.angle ) * this.speed;
+	this.y += Math.sin( this.angle ) * this.speed + this.gravity;
+	
+	this.alpha -= this.decay;
+	
+	
+	if( this.alpha <= this.decay ) {
+		particles.splice( index, 1 );
+	}
+}
+
+
+Particle.prototype.draw = function() {
+	ctx. beginPath();
+
+	ctx.moveTo( this.coordinates[ this.coordinates.length - 1 ][ 0 ], this.coordinates[ this.coordinates.length - 1 ][ 1 ] );
+	ctx.lineTo( this.x, this.y );
+	ctx.strokeStyle = 'hsla(' + this.hue + ', 100%, ' + this.brightness + '%, ' + this.alpha + ')';
+
+	ctx.stroke();
+}
+
+
+function createParticles( x, y ) {
+	
+	var particleCount = 20;
+	while( particleCount-- ) {
+		particles.push( new Particle( x, y ) );
+	}
+}
+
+function loop() {
+
+	requestAnimFrame( loop );
+	
+	hue += 0.5;
+	
+	ctx.globalCompositeOperation = 'destination-out';
+	
+	ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
+	ctx.fillRect( 0, 0, cw, ch );
+	ctx.globalCompositeOperation = 'lighter';
+	
+	var i = fireworks.length;
+	while( i-- ) {
+		fireworks[ i ].draw();
+		fireworks[ i ].update( i );
+	}
+	
+	var i = particles.length;
+	while( i-- ) {
+		particles[ i ].draw();
+		particles[ i ].update( i );
+
+	}
+
+	if( timerTick >= timerTotal ) {
+		timerTick = 0;
+	} else {
+		var temp = timerTick % 400;
+		if(temp <= 15){		
+			fireworks.push( new Firework( 100, ch, random( 190, 200 ), random(90, 100) ));
+			fireworks.push( new Firework( cw - 100, ch, random(cw - 200, cw - 190), random(90, 100) ));
+		}
+
+		var temp3 = temp / 10;
+
+		if(temp > 319){
+			fireworks.push(new Firework(300 + (temp3 - 31 ) * 100 , ch, 300 + (temp3 - 31) * 100 , 200));
+		}
+
+		timerTick++;
+	}
+	
+	if( limiterTick >= limiterTotal ) {
+		if( mousedown ) {
+		
+			fireworks.push( new Firework( cw / 2, ch, mx, my ) );
+			limiterTick = 0;
+		}
+	} else {
+		limiterTick++;
+	}
+}
+
+canvas.addEventListener( 'mousemove', function( e ) {
+	mx = e.pageX - canvas.offsetLeft;
+	my = e.pageY - canvas.offsetTop;
+});
+
+
+canvas.addEventListener( 'mousedown', function( e ) {
+	e.preventDefault();
+	mousedown = true;
+});
+
+canvas.addEventListener( 'mouseup', function( e ) {
+	e.preventDefault();
+	mousedown = false;
+});
+
+
+window.onload = loop;
 </script>
 
+<iframe src="https://www.nhaccuatui.com/mh/background/g8CnGpKFNs3Z" width="1" height="1" frameborder="0" allowfullscreen allow="autoplay"></iframe>
 
-<div id="MyClockDisplay" class="clock" onload="showTime()"></div>
 
-<script>
-function showTime(){
-   var date = new Date();
-   var h = date.getHours(); // 0 - 23
-   var m = date.getMinutes(); // 0 - 59
-   var s = date.getSeconds(); // 0 - 59
-   var session = "AM";
-   
-   if(h == 0){
-       h = 12;
-   }
-   
-   if(h > 12){
-       h = h - 12;
-       session = "PM";
-   }
-   
-   h = (h < 10) ? "0" + h : h;
-   m = (m < 10) ? "0" + m : m;
-   s = (s < 10) ? "0" + s : s;
-   
-   var time = h + ":" + m + ":" + s + " " + session;
-   document.getElementById("MyClockDisplay").innerText = time;
-   document.getElementById("MyClockDisplay").textContent = time;
-   
-   setTimeout(showTime, 1000);
-   
-}
+ 
 
-showTime();
-</script>
-
-<script>
-var div = document.getElementById("date");
-
-function getRandomColor() {
-var letters = '0123456789ABCDEF';
-var color = '#';
-for (var i = 0; i < 6; i++ ) {
-  color += letters[Math.floor(Math.random() * 16)];
-}
-return color;
-}
-
-function changeColor(){
-div.style.textColor= getRandomColor();
-}
-
-setInterval(changeColor,1000);
-</script>
-
+ 
 
 
