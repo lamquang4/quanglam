@@ -101,14 +101,14 @@
       <h1> Lâm Diệu Quang</h1>
       <div id="I">
         
-        <a onclick="copyToClipboard('#p1')" href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="blank" id="mail">
+        <a  id="mail">
          <img src="./pic/gmail.png">
         </a>
-    
-<span id="O">lamdieuquang0105@gmail.com</span>
+    <a onclick="copyToClipboard('#p1')" href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="blank">
+<span id="O">lamdieuquang0105@gmail.com</span></a>
 </div>
 
-      <p id="Z">Đang học tại trường đại học Sài Gòn</p>
+      <p id="Z">Học tại trường đại học Sài Gòn</p>
       <p id="P">Sở thích: bóng đá, chơi game...</p>
     
       <div class="B">
@@ -136,10 +136,17 @@ function copyToClipboard() {
   </html>
 
   <style>
+    #Z{
+      margin-top: 5px;
+    }
+  a{
+  text-decoration: none;
+  color:black;
+}
 #mail img{
   height:29px;
   width: 29px;
-  margin-bottom: 5px;
+  margin-bottom: 1px;
   cursor: pointer;
 }
 
@@ -236,7 +243,7 @@ setInterval(changeColor,1000);
 <style>
   .A{
 width:400px;
-height: 500px;
+height: 510px;
 border-radius: 10px;
 background: linear-gradient(var(--bg1), var(--bg2));
 }
@@ -336,9 +343,9 @@ margin: 5px 0 0 12px;
   margin-top: 11px;}
     #E{background:linear-gradient(45deg, #d5135a, #f05924);
     margin-top: 11px;}
-    #G{line-height:30px;}
+    #G{line-height:28px;}
    #Z{line-height:25px;}
-   #P{line-height:10px;}
+   #P{line-height:25px;}
    #I{
     display: flex;
     align-items: center;
@@ -347,6 +354,7 @@ margin: 5px 0 0 12px;
  }
 
    #O{line-height: 40px;
+
 margin:5px 0px 10px;
 font-weight: 500;
 font-size: 20px;
@@ -356,14 +364,12 @@ font-family: bold,sans-serif;
 .A p:hover{color:gold;}
 .A span:hover{color:gold;}
 .A h1:hover{color:gold;}
-#Sgu{height: 60px;
-width: 60px;
-margin-top: 169px;
-
+#Sgu{height: 59.5px;
+width: 59.5px;
+padding-left: 24px;
+padding-top: 160px;
 }
-
+#All{}
 
 
 </style>
-
-
